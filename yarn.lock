@@ -445,6 +445,13 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.15.tgz#596a1747233694d50f6ad8a7869fcb6f56cf5841"
   integrity sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==
 
+"@types/node@^24.0.3":
+  version "24.0.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.0.3.tgz#f935910f3eece3a3a2f8be86b96ba833dc286cab"
+  integrity sha512-R4I/kzCYAdRLzfiCabn9hxWfbuHS573x+r0dJMkkzThEa7pbrcDWK+9zu3e7aBOouf+rQAciqPFMnxwr0aWgKg==
+  dependencies:
+    undici-types "~7.8.0"
+
 "@types/react-dom@^19.1.2":
   version "19.1.6"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-19.1.6.tgz#4af629da0e9f9c0f506fc4d1caa610399c595d64"
@@ -650,6 +657,11 @@ concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
+
+cookie@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/cookie/-/cookie-1.0.2.tgz#27360701532116bd3f1f9416929d176afe1e4610"
+  integrity sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==
 
 cross-spawn@^7.0.6:
   version "7.0.6"
@@ -1157,6 +1169,11 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
+radash@^12.1.1:
+  version "12.1.1"
+  resolved "https://registry.yarnpkg.com/radash/-/radash-12.1.1.tgz#4858a08a04318a07d6d92d17d11b7528938edd93"
+  integrity sha512-h36JMxKRqrAxVD8201FrCpyeNuUY9Y5zZwujr20fFO77tpUtGa6EZzfKw/3WaiBX95fq7+MpsuMLNdSnORAwSA==
+
 react-dom@18:
   version "18.3.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.3.1.tgz#c2265d79511b57d479b3dd3fdfa51536494c5cb4"
@@ -1164,6 +1181,21 @@ react-dom@18:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.2"
+
+react-router-dom@^7.6.2:
+  version "7.6.2"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-7.6.2.tgz#e97e386ab390b6503a2a7968124b7a3237fb10c7"
+  integrity sha512-Q8zb6VlTbdYKK5JJBLQEN06oTUa/RAbG/oQS1auK1I0TbJOXktqm+QENEVJU6QvWynlXPRBXI3fiOQcSEA78rA==
+  dependencies:
+    react-router "7.6.2"
+
+react-router@7.6.2, react-router@^7.6.2:
+  version "7.6.2"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.6.2.tgz#9f48b343bead7d0a94e28342fc4f9ae29131520e"
+  integrity sha512-U7Nv3y+bMimgWjhlT5CRdzHPu2/KVmqPwKUCChW8en5P3znxUqwlYFlbmyj8Rgp1SF6zs5X4+77kBVknkg6a0w==
+  dependencies:
+    cookie "^1.0.1"
+    set-cookie-parser "^2.6.0"
 
 react@18:
   version "18.3.1"
@@ -1229,6 +1261,11 @@ semver@^7.6.0:
   version "7.7.2"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.7.2.tgz#67d99fdcd35cec21e6f8b87a7fd515a33f982b58"
   integrity sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==
+
+set-cookie-parser@^2.6.0:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/set-cookie-parser/-/set-cookie-parser-2.7.1.tgz#3016f150072202dfbe90fadee053573cc89d2943"
+  integrity sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==
 
 shebang-command@^2.0.0:
   version "2.0.0"
@@ -1299,6 +1336,11 @@ typescript@~5.8.3:
   version "5.8.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.8.3.tgz#92f8a3e5e3cf497356f4178c34cd65a7f5e8440e"
   integrity sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==
+
+undici-types@~7.8.0:
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.8.0.tgz#de00b85b710c54122e44fbfd911f8d70174cd294"
+  integrity sha512-9UJ2xGDvQ43tYyVMpuHlsgApydB8ZKfVYTsLDhXkFL/6gfkp+U8xTGdh8pMJv1SpZna0zxG1DwsKZsreLbXBxw==
 
 uri-js@^4.2.2:
   version "4.4.1"

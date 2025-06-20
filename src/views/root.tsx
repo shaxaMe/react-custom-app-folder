@@ -1,0 +1,16 @@
+import { Suspense, useEffect } from "react";
+import { Navigate, Outlet, useMatch } from "react-router-dom";
+import type { CustomRoute } from "@/types";
+
+interface Props {
+  getRoutes?: () => CustomRoute[];
+}
+
+export default function Root(props: Props): React.ReactElement {
+
+  return (
+      <Suspense fallback={'<Spinner />'}>
+        <Outlet />
+      </Suspense>
+  );
+}
