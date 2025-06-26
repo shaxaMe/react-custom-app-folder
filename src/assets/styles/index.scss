@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Onest", sans-serif, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100dvh;
+  scroll-behavior: smooth;
+  @apply bg-white dark:bg-dark-base-100;
+}
+
+// Ant Design Pagination
+.ant-pagination {
+  .ant-pagination-item {
+    @apply border-none;
+
+    a {
+      @apply text-black;
+    }
+
+    &:hover {
+      @apply border-none dark:border-dark-primary;
+      a {
+        @apply text-black dark:text-dark-primary;
+      }
+    }
+  }
+
+  .ant-pagination-item-active {
+    @apply bg-base-300 font-medium;
+
+    a {
+      @apply text-gray-800 dark:text-dark-base-100;
+    }
+
+    &:hover {
+      @apply bg-base-300 border-none;
+    }
+  }
+
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    .ant-pagination-item-link {
+      @apply border-base-300 dark:border-dark-base-300 text-base-500 dark:text-dark-base-500;
+
+      &:hover {
+        @apply border-primary dark:border-dark-primary text-primary dark:text-dark-primary;
+      }
+    }
+  }
+
+  .ant-pagination-disabled {
+    .ant-pagination-item-link {
+      @apply border-base-300 dark:border-dark-base-300 text-base-400 dark:text-dark-base-400;
+    }
+  }
+}
+
+// Custom Input Styles
+.custom-input {
+  @apply border-base-700 dark:border-dark-base-300 
+         focus:border-primary dark:focus:border-dark-primary 
+         focus:ring-primary/20 dark:focus:ring-dark-primary/20 
+         focus:shadow-sm w-full
+         bg-base-100 dark:bg-dark-base-100
+         text-base-500 dark:text-dark-base-500;
+
+  &.ant-picker {
+    @apply bg-base-100 dark:bg-dark-base-100 
+           border-base-700 dark:border-dark-base-300;
+
+    input {
+      @apply bg-transparent text-base-500 dark:text-dark-base-500;
+    }
+
+    .ant-picker-suffix {
+      @apply text-base-400 dark:text-dark-base-400;
+    }
+  }
+
+  &.ant-select {
+    @apply bg-base-100 dark:bg-dark-base-100 
+           border-base-700 dark:border-dark-base-300;
+
+    .ant-select-selector {
+      @apply bg-transparent;
+    }
+
+    .ant-select-selection-item {
+      @apply text-base-500 dark:text-dark-base-500;
+    }
+
+    .ant-select-arrow {
+      @apply text-base-400 dark:text-dark-base-400;
+    }
+  }
+}
+
+// Custom Button Styles
+.custom-btn {
+  @apply transition-colors duration-200;
+
+  &:hover {
+    svg {
+      path {
+        @apply stroke-primary dark:stroke-dark-primary;
+      }
+    }
+  }
+
+  &.ant-btn-primary {
+    @apply bg-primary dark:bg-dark-primary 
+           hover:bg-primary-dark dark:hover:bg-dark-primary-dark
+           text-white dark:text-dark-base-100;
+  }
+
+  &.ant-btn-default {
+    @apply bg-base-100 dark:bg-dark-base-100
+           border-[#D5D7DA] dark:border-dark-base-300
+           hover:border-primary dark:hover:border-dark-primary
+           hover:text-primary dark:hover:text-dark-primary;
+  }
+}
+
+// Table Styles
+.ant-table {
+  @apply bg-base-100 dark:bg-dark-base-100;
+
+  .ant-table-thead > tr > th {
+    @apply bg-base-200 dark:bg-dark-base-200 
+           text-light-100 dark:text-dark-base-500
+           border-base-800 dark:border-dark-base-300 text-sm;
+  }
+
+  .ant-table-tbody > tr > td {
+    @apply border-base-800 dark:border-dark-base-300;
+  }
+
+  .ant-table-tbody > tr:hover > td {
+    @apply bg-base-200/50 dark:bg-dark-base-200/50;
+  }
+}
+
+// Drawer Styles
+.ant-drawer {
+  .ant-drawer-content {
+    @apply bg-base-100 dark:bg-dark-base-100;
+  }
+
+  .ant-drawer-header {
+    @apply bg-base-100 dark:bg-dark-base-100 
+           border-base-300 dark:border-dark-base-300;
+  }
+
+  .ant-drawer-title {
+    @apply text-base-500 dark:text-dark-base-500;
+  }
+
+  .ant-drawer-close {
+    @apply text-base-400 dark:text-dark-base-400;
+  }
+}
+
+// Dropdown Styles
+.ant-dropdown {
+  .ant-dropdown-menu {
+    @apply bg-base-100 dark:bg-dark-base-100 
+           border border-base-300 dark:border-dark-base-300;
+  }
+
+  .ant-dropdown-menu-item {
+    @apply text-base-500 dark:text-dark-base-500
+           hover:bg-base-200 dark:hover:bg-dark-base-200;
+  }
+}
+
+// Hide measure row
+.ant-table-measure-row {
+  display: none !important;
+}

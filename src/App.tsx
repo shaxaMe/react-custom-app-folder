@@ -1,7 +1,12 @@
-import {RouteProvider} from "./providers"
+import { RouteProvider, QueryProvider } from "./providers";
+import { NotificationProvider } from "@/context/notification.tsx";
 
 export default function App(): React.ReactElement {
   return (
-    <RouteProvider />
-  )
+    <QueryProvider>
+      <NotificationProvider>
+          <RouteProvider />
+      </NotificationProvider>
+    </QueryProvider>
+  );
 }
