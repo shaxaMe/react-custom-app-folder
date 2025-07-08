@@ -13,7 +13,7 @@ import UIpagination from "@/components/ui/pagination/UIpagination";
 import UiDrawer from "@/components/ui/drawer/UIDrawer";
 import UserAdd from "../components/forms/user-add";
 import UserFilter from "../components/filters";
-import { Badge, Button } from "antd";
+import { Badge, Button, Modal } from "antd";
 
 //types
 import type { TActions, iFilters } from "../types";
@@ -259,10 +259,13 @@ function Users() {
           />
         </div>
       </div>
-      <UiDrawer
+      <Modal
         title={selectedUser ? "Редактировать" : activeTitle}
         open={open}
-        setOpen={setOpen}>
+        centered
+        okButtonProps={{ style: { display: "none" } }}
+        cancelButtonProps={{ style: { display: "none" } }}
+        onCancel={() => setOpen(false)}>
         {actions === "add" && (
           <UserAdd
             initialValues={selectedUser || undefined}
@@ -276,7 +279,7 @@ function Users() {
             setOpen={setOpen}
           />
         )}
-      </UiDrawer>
+      </Modal>
     </div>
   );
 }

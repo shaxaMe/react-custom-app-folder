@@ -1,10 +1,12 @@
 import type React from "react";
 import { useState } from "react";
-import { Table as AntTable, Dropdown, Button, Space, Modal } from "antd";
+import { Table as AntTable, Dropdown, Button, Space, Modal, Image } from "antd";
 import type { ImmigrantData } from "@/types/table/table";
+import { EyeOutlined } from "@ant-design/icons";
 import UserDetail from "../details/details";
 import UIDrawer from "@/components/ui/drawer/UIDrawer";
 import type { IMigrantTable } from "../../types";
+import RuFlag from "../../assets/img/russian.png";
 
 const MoreIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -79,11 +81,33 @@ const MigrantTable: React.FC<IMigrantTable> = ({
       dataIndex: "fullName",
       key: "fullName",
       width: 250,
-      render: (text: string, record: ImmigrantData) => (
-        <div
-          onClick={() => handleViewDetails(record)}
-          className="text-sm underline cursor-pointer hover:text-primary">
-          {text}
+      // render: (text: string, record: ImmigrantData) => (
+      //   <div
+      //     onClick={() => handleViewDetails(record)}
+      //     className="text-sm underline cursor-pointer hover:text-primary">
+      //     {text}
+      //   </div>
+      // ),
+      render: (_: string, record: ImmigrantData) => (
+        <div className="flex items-center gap-2">
+          <div className="w-8 h-8 rounded-lg overflow-hidden">
+            <Image
+              preview={{
+                mask: (
+                  <span
+                    role="img"
+                    aria-label="eye"
+                    className="anticon anticon-eye">
+                    <EyeOutlined />
+                  </span>
+                ),
+              }}
+              src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+              alt="TableImg"
+              className="w-full h-full custom-image object-cover"
+            />
+          </div>
+          <p className="text-base-500 text-sm font-medium">{record.fullName}</p>
         </div>
       ),
     },
@@ -98,12 +122,28 @@ const MigrantTable: React.FC<IMigrantTable> = ({
       dataIndex: "birthCountry",
       key: "birthCountry",
       width: 180,
+      render: (text: string, record: ImmigrantData) => (
+        <div className="flex items-center gap-2.5">
+          <div className="w-8 h-8 rounded-lg overflow-hidden">
+            <img src={RuFlag} className="w-full h-full object-cover" alt="RuFlag" />
+          </div>
+          <p>{text}</p>
+        </div>
+      ),
     },
     {
       title: "Пришедшая страна",
       dataIndex: "birthCity",
       key: "birthCity",
       width: 150,
+      render: (text: string, record: ImmigrantData) => (
+        <div className="flex items-center gap-2.5">
+          <div className="w-8 h-8 rounded-lg overflow-hidden">
+            <img src={RuFlag} className="w-full h-full object-cover" alt="RuFlag" />
+          </div>
+          <p>{text}</p>
+        </div>
+      ),
     },
     {
       title: "",

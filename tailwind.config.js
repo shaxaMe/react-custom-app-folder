@@ -8,6 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        
         base: {
           50: '#F9FAFB',
           100: '#FFFFFF',
@@ -25,6 +26,7 @@ export default {
           100:"#6b7280",
           200: "#f8f8fa",
           300: "#9ca3af", 
+          400: "#f0f0f1",
            green:{
             50: '#4dd282',
             100: '#dcfce7',

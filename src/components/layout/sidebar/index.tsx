@@ -1,9 +1,10 @@
 import SideBarLeft from "@/assets/icons/sidebar-left.svg?react";
+import LogoVisa from "@/assets/icons/icon-visa.svg?react";
 import Logo from "@/assets/icons/logo.svg?react";
 import LogoFull from "@/assets/icons/logo-full.svg?react";
 import ChartRing from "@/assets/icons/chart-ring.svg?react";
 import LogoMVD from "@/assets/img/logo-nvd.png";
-import UserAccount from "@/assets/icons/user-account.svg?react";
+import LogoUserAccount from "@/assets/icons/user-account.svg?react";
 import { useEffect, useState } from "react";
 import { Button, Flex, Layout, Menu, Typography, Tag } from "antd";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -26,14 +27,14 @@ function AsideBar() {
   const items: MenuItem[] = [
     {
       key: "/",
-      icon: <ChartRing />,
-      label: <div className="flex flex-1 justify-between items-center">Главная <Tag className="h-fit p-1 border bg-primary-100/10 border-primary-100 text-primary-100 rounded-lg">99+</Tag>
+      icon: <LogoUserAccount className="!w-7 !h-7" />,
+      label: <div className="flex flex-1 justify-between items-center">Личност <Tag className="h-fit p-1 border bg-primary-100/10 border-primary-100 text-primary-100 rounded-lg">99+</Tag>
 </div>,
     },
     {
       key: "/users-items",
-      icon: <UserAccount />,
-      label: "Личност",
+      icon: <LogoVisa className="!w-7 !h-7" />,
+      label: "Визы",
       children: [
         {
           key: paths.dashboard.users.getHref(),

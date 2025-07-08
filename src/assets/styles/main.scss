@@ -81,18 +81,34 @@
 }
 
 .ant-menu-item-selected {
+  svg {
+    rect,
+    path {
+      stroke: #1677ff !important;
+    }
+  }
   background: #3276ff !important;
   color: #fff !important;
   &:hover {
     background: #3276ff !important;
     color: #fff !important;
+    svg {
+      fill: #fff !important;
+      stroke: #fff !important;
+      rect,
+      path {
+        stroke: #1677ff !important;
+      }
+    }
   }
 }
 
 .ant-menu-submenu-selected {
-  rect,
-  path {
-    stroke: #1677ff;
+  svg {
+    rect,
+    path {
+      stroke: #1677ff !important;
+    }
   }
 }
 .ant-breadcrumb-separator {
@@ -235,11 +251,11 @@
 // }
 
 .custom-segment {
-  &.w-full{
-    .ant-segmented-group{
+  &.w-full {
+    .ant-segmented-group {
       width: 100%;
     }
-    .ant-segmented-item{
+    .ant-segmented-item {
       flex: 1;
     }
   }
@@ -294,19 +310,26 @@
   .ant-notification-notice-icon {
     display: none !important;
   }
-  .ant-notification-notice-description{
-    margin-inline-start:0 !important;
+  .ant-notification-notice-description {
+    margin-inline-start: 0 !important;
   }
-  &.ant-notification-notice-info{
+  &.ant-notification-notice-info {
     box-shadow: inset 0 4px 0 0 #3276ff;
   }
-  &.ant-notification-notice-success{
-    box-shadow: inset 0 4px 0 0 #4DD282;
+  &.ant-notification-notice-success {
+    box-shadow: inset 0 4px 0 0 #4dd282;
   }
-  &.ant-notification-notice-warning{
-    box-shadow: inset 0 4px 0 0 #FBBF24;
+  &.ant-notification-notice-warning {
+    box-shadow: inset 0 4px 0 0 #fbbf24;
   }
-  &.ant-notification-notice-error{
-    box-shadow: inset 0 4px 0 0 #EF4444;
+  &.ant-notification-notice-error {
+    box-shadow: inset 0 4px 0 0 #ef4444;
+  }
+}
+
+.ant-modal-wrap {
+  padding: 10px;
+  .ant-modal-content {
+    width: fit-content !important;
   }
 }

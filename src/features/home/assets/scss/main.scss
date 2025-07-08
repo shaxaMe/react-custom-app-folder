@@ -1,0 +1,8 @@
+.custom-tab__btn{
+    &.ant-btn{
+        @apply bg-transparent border-none shadow-none hover:!bg-light-400 hover:!text-base-500 !rounded-lg focus-visible:!outline-offset-0;
+        &.active{
+            @apply bg-light-400
+        }
+    }
+}

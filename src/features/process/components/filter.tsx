@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, Select, Row, Col,Empty } from "antd";
+import { Input, Select, Row, Col, Empty } from "antd";
 import IconUserSquare from "@/assets/icons/icon-user-square.svg?react";
 import IconLocation from "@/assets/icons/icon-location.svg?react";
 
@@ -91,11 +91,7 @@ const Filters: React.FC<FiltersProps> = ({ onFiltersChange }) => {
               prefix={<IconLocation className="w-4 h-4 text-gray-400" />}
               value={filters.citizenship || undefined}
               onChange={(value) => handleInputChange("citizenship", value)}
-              notFoundContent={
-                <Empty
-                  description="Hech narsa topilmadi"
-                />
-              }
+              notFoundContent={<Empty description="Hech narsa topilmadi" />}
               className="filter-select w-full"
               showSearch
               filterOption={(input, option) =>
